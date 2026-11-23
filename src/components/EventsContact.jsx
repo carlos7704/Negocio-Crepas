@@ -224,21 +224,51 @@ export default function EventsContact() {
 
               </div>
 
-              {/* Mapa de Zona de Entrega / Referencia Visual */}
+              {/* Mapa de Ubicación / Google Maps */}
               <div className="p-4 rounded-2xl bg-[#141720] border border-[#262C3D]">
-                <div className="flex items-center gap-2 mb-2 text-xs font-bold text-white">
-                  <MapPin className="w-4 h-4 text-[#E6B34A]" />
-                  <span>Zona de Cobertura y Entrega</span>
+                <div className="flex items-center justify-between mb-2">
+                  <div className="flex items-center gap-2 text-xs font-bold text-white">
+                    <MapPin className="w-4 h-4 text-[#E6B34A]" />
+                    <span>Ubicación y Punto de Entrega</span>
+                  </div>
+                  <a
+                    href={BUSINESS_INFO.googleMapsUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-[11px] text-[#E6B34A] hover:underline font-semibold flex items-center gap-1"
+                  >
+                    <span>Abrir en Google Maps</span>
+                    <span>↗</span>
+                  </a>
                 </div>
-                <div className="h-28 w-full rounded-xl bg-[#0B0D12] border border-[#262C3D] flex flex-col items-center justify-center text-center p-3 relative overflow-hidden">
-                  <div className="absolute inset-0 opacity-15 bg-[radial-gradient(#E6B34A_1px,transparent_1px)] [background-size:12px_12px]" />
-                  <MapPin className="w-6 h-6 text-[#E6B34A] mb-1 animate-bounce" />
-                  <span className="text-xs font-semibold text-zinc-200">
-                    Zona Metropolitana de Guadalajara & Alrededores
-                  </span>
-                  <span className="text-[10px] text-zinc-500 mt-0.5">
-                    Coordinación exacta y punto de entrega vía WhatsApp
-                  </span>
+
+                <div className="rounded-xl overflow-hidden border border-[#262C3D] bg-[#0B0D12]">
+                  {/* Vista interactiva incrustada de Google Maps */}
+                  <iframe
+                    title="Ubicación Pinche Club Las Pinches Crepas"
+                    src="https://maps.google.com/maps?q=C.+Durango+41-49,+Progreso,+%C3%81lvaro+Obreg%C3%B3n,+01080+Ciudad+de+M%C3%A9xico,+CDMX&t=&z=16&ie=UTF8&iwloc=&output=embed"
+                    className="w-full h-36 border-0 filter contrast-125"
+                    loading="lazy"
+                    allowFullScreen
+                  />
+                  <div className="p-3 bg-[#1A1E29] border-t border-[#262C3D] flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+                    <div>
+                      <p className="text-xs font-semibold text-zinc-200">
+                        {BUSINESS_INFO.address}
+                      </p>
+                      <p className="text-[10px] text-zinc-400 mt-0.5">
+                        Punto de referencia y servicio a domicilio
+                      </p>
+                    </div>
+                    <a
+                      href={BUSINESS_INFO.googleMapsUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="inline-flex items-center justify-center px-3 py-1.5 rounded-lg text-xs font-bold bg-[#E6B34A] text-black hover:bg-[#F5D078] transition-colors flex-shrink-0"
+                    >
+                      Cómo llegar
+                    </a>
+                  </div>
                 </div>
               </div>
 

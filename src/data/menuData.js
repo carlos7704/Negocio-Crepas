@@ -9,7 +9,9 @@ export const BUSINESS_INFO = {
   instagram: "@crepasest",
   instagramUrl: "https://instagram.com/crepasest",
   scheduleNotice: "Servicio a domicilio los sábados de 7:00 p.m. a 10:30 p.m.",
-  deliveryZone: "Servicio a domicilio y barra dulce para eventos en toda la zona metropolitana.",
+  deliveryZone: "Servicio a domicilio y barra dulce para eventos.",
+  address: "C. Durango 41-49, Progreso, Álvaro Obregón, 01080 Ciudad de México, CDMX",
+  googleMapsUrl: "https://maps.app.goo.gl/TMQ1VNgddcSTVJDL8?g_st=iw",
   academic: {
     student: "Carlos David Macias Santillan",
     subject: "Desarrollo De Aplicaciones Web en la Nube y Móviles",
